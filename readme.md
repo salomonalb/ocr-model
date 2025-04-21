@@ -68,4 +68,24 @@ Check with either of these:
 
 ---
 
-Let me know if you want a shell alias or script to simplify this setup even more!
+### ✅ **Step 4: Download the Model**
+
+from the manga ocr model and client private repo and check the releases, there it's where the binary is. paste it into the model folder
+
+---
+
+### ✅ **Step 5: Run the app**
+
+to run the app:
+
+```bash
+  python ./app/app.py
+```
+
+---
+
+### ✅ **Step 6: Create the docker image**
+
+```bash
+  docker build -t manga-ocr-app .
+```
