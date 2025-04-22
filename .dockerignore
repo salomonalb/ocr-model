@@ -10,3 +10,4 @@ venv/
 .git/
 .gitignore
 .DS_Store
+model/pytorch_model.bin

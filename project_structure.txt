@@ -1,0 +1,23 @@
+- .dockerignore
+- .gitignore
+- .gradio
+  - certificate.pem
+- app
+  - .gitattributes
+  - app.py
+  - README.md
+- Dockerfile
+- model
+  - .gitattributes
+  - bin.md
+  - config.json
+  - preprocessor_config.json
+  - pytorch_model.bin
+  - README.md
+  - special_tokens_map.json
+  - tokenizer_config.json
+  - vocab.txt
+- readme.md
+- requirements.txt
+- venv
+
