@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manga OCR Test</title>
+  </head>
+  <body>
+    <h1>Manga OCR Test</h1>
+    <input type="file" id="imageInput" accept="image/*" />
+    <button onclick="uploadImage()">Upload and OCR</button>
+    <div id="result"></div>
+
+    <script>
+      async function uploadImage() {
+        const fileInput = document.getElementById("imageInput");
+        const file = fileInput.files[0];
+        if (!file) {
+          alert("Please select an image file");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("image", file);
+
+        try {
+          const response = await fetch("/ocr", {
+            method: "POST",
+            body: formData,
+          });
+          const result = await response.json();
+          document.getElementById("result").innerText = result.text;
+        } catch (error) {
+          console.error("Error:", error);
+          alert("Failed to upload image or retrieve text");
+        }
+      }
+    </script>
+  </body>
+</html>

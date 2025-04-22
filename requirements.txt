@@ -5,3 +5,5 @@ Pillow
 fugashi
 protobuf
 unidic_lite
+manga-ocr
+fastapi
