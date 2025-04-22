@@ -1,0 +1,3 @@
+Pillow
+manga-ocr
+fastapi
