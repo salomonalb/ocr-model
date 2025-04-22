@@ -14,9 +14,7 @@ COPY app/app.py ./app.py
 COPY model ./model
 
 # Download the missing binary into the same model folder
-RUN curl -L -H "Authorization: token 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" \
-         -o /app/model/pytorch_model.bin \
-         https://github.com/salomonalb/manga-ocr-model-and-client/releases/download/v1.0/pytorch_model.bin
+ADD https://github.com/salomonalb/ocr-model/releases/download/v1.0/pytorch_model.bin ./model
 
 # Expose Gradio's default port
 EXPOSE 7860
